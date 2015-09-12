@@ -1,4 +1,8 @@
+# gideros files
 .tmp/
+
+# luacov files
 luacov.stats.out
-luacov.report.out
-luacov.report.xml
+
+# cobertura files
+coverage.xml

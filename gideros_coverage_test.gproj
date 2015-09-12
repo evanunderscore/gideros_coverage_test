@@ -2,9 +2,12 @@
  <properties win_org="GiderosMobile" encryptAssets="0" architecture="0" osx_org="GiderosMobile" osx_domain="giderosmobile.com" retinaDisplay="0" mouseTouchOrder="0" autorotation="0" encryptCode="0" iosDevice="0" win_domain="giderosmobile.com" windowHeight="0" mouseToTouch="1" assetsOnly="0" windowWidth="0" logicalWidth="320" android_template="0" orientation="0" scaleMode="0" touchToMouse="1" packageName="com.yourdomain.yourapp" logicalHeight="480" fps="60">
   <imageScales/>
  </properties>
+ <folder name="src">
+  <file source="src/init.lua"/>
+  <file excludeFromExecution="1" source="src/maths.lua"/>
+  <file source="src/main.lua"/>
+ </folder>
  <folder name="test">
   <file excludeFromExecution="1" source="test/test.lua"/>
  </folder>
- <file source="maths.lua"/>
- <file source="main.lua"/>
 </project>

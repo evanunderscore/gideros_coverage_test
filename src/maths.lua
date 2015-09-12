@@ -1,7 +1,11 @@
-function adder(a, b)
+local maths = {}
+
+function maths.adder(a, b)
 	return a + b
 end
 
-function subber(a, b)
+function maths.subber(a, b)
 	return a - b
 end
+
+return maths

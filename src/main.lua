@@ -1,2 +1,4 @@
+maths = require 'maths'
+
 print('hello world')
-print('1 + 2 = ' .. adder(1, 2))
+print('1 + 2 = ' .. maths.adder(1, 2))

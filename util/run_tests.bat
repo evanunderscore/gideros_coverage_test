@@ -12,14 +12,14 @@ if not defined LUA (
 echo using lua interpreter %LUA%
 
 rem set up lua environment
-set LUA_INIT=require 'src/init'; package.path = package.path .. ';lib/?.lua'
+set LUA_INIT=require 'init'; package.path = package.path .. ';lib/?.lua'
 
 rem delete old files if they exist
 del luacov.stats.out 2> nul
 del coverage.xml 2> nul
 
 rem run tests with coverage
-%LUA% -lluacov test/test.lua
+%LUA% -lluacov tests/test.lua
 
 rem fix paths unless told otherwise
 if not defined TEST_FAIL (

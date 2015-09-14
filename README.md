@@ -3,6 +3,15 @@ Gideros Coverage Test
 
 Test project for combining Gideros with luacov and diff-cover for code coverage reports.
 
+Installation
+------------
+
+Clone the respository and its submodules with:
+
+```
+git clone --recursive https://github.com/evanunderscore/gideros_coverage_test
+```
+
 Reproducing diff-cover failure
 ------------------------------
 

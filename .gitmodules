@@ -1,0 +1,6 @@
+[submodule "luacov"]
+	path = luacov
+	url = https://github.com/keplerproject/luacov
+[submodule "luacov-cobertura"]
+	path = luacov-cobertura
+	url = https://github.com/britzl/luacov-cobertura

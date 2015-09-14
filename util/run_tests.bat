@@ -12,7 +12,7 @@ if not defined LUA (
 echo using lua interpreter %LUA%
 
 rem set up lua environment
-set LUA_INIT=require 'init'; package.path = package.path .. ';lib/?.lua'
+set LUA_INIT=require 'init'; package.path = package.path .. ';luacov/src/?.lua;luacov-cobertura/src/?.lua'
 
 rem delete old files if they exist
 del luacov.stats.out 2> nul
@@ -27,7 +27,7 @@ if not defined TEST_FAIL (
 )
 
 rem convert luacov format to cobertura format
-%LUA% util\luacov-cobertura -o coverage.xml
+%LUA% luacov-cobertura/src/bin/luacov-cobertura -o coverage.xml
 
 rem check coverage and fail if all lines aren't tested
 diff-cover coverage.xml --compare-branch master --fail-under 100

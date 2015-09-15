@@ -17,8 +17,8 @@ del luacov.stats.out 2> nul
 del coverage.xml 2> nul
 
 rem run tests with coverage
-set LUA_INIT=require('init'); package.path = package.path .. ';luacov/src/?.lua'
-%LUA% -lluacov tests/test.lua
+set LUA_INIT=package.path = package.path .. ';luacov/src/?.lua;luaunit/?.lua'
+%LUA% -l luacov -l init tests/test.lua
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 rem fix paths unless told otherwise

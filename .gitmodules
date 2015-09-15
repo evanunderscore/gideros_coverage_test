@@ -4,3 +4,6 @@
 [submodule "luacov-cobertura"]
 	path = luacov-cobertura
 	url = https://github.com/britzl/luacov-cobertura
+[submodule "luaunit"]
+	path = luaunit
+	url = https://github.com/bluebird75/luaunit

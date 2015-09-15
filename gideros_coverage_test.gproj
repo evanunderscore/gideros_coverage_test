@@ -1,7 +1,10 @@
 <project>
- <properties assetsOnly="0" retinaDisplay="0" mouseTouchOrder="0" win_domain="giderosmobile.com" mouseToTouch="1" logicalHeight="480" scaleMode="0" fps="60" win_org="GiderosMobile" windowHeight="0" android_template="0" encryptCode="0" osx_domain="giderosmobile.com" encryptAssets="0" architecture="0" orientation="0" touchToMouse="1" iosDevice="0" autorotation="0" windowWidth="0" packageName="com.yourdomain.yourapp" osx_org="GiderosMobile" logicalWidth="320">
+ <properties mouseTouchOrder="0" retinaDisplay="0" windowWidth="0" iosDevice="0" orientation="0" osx_org="GiderosMobile" android_template="0" mouseToTouch="1" win_org="GiderosMobile" win_domain="giderosmobile.com" assetsOnly="0" packageName="com.yourdomain.yourapp" logicalWidth="320" autorotation="0" fps="60" encryptAssets="0" encryptCode="0" windowHeight="0" scaleMode="0" architecture="0" logicalHeight="480" touchToMouse="1" osx_domain="giderosmobile.com">
   <imageScales/>
  </properties>
+ <folder name="luastrict">
+  <file source="luastrict/Strict.lua" excludeFromExecution="1"/>
+ </folder>
  <folder name="scripts">
   <file source="scripts/maths.lua" excludeFromExecution="1"/>
  </folder>

@@ -1,0 +1,15 @@
+Strict implements a somewhat stricter handling of global variables than
+Lua. There are two basic modes: weak and strong. In the weak mode you
+don't need to declare a global but you'd have to initialise it in the
+main part of your program (i.e not inside a function).
+
+In strong mode anything not formally declared  (including non-local
+functions) gets the whip.
+
+See the examples for more on how to use the module.
+
+Anything wrong or not working? An idea how to make this bettter? Please
+send comments to thomas.lauer@gmail.com or visit my contact page:
+http://thomaslauer.com/start/Contact.
+
+

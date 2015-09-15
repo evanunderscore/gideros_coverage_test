@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 rem run tests and report coverage information
 rem run from repository root (as "util\run_tests.bat")
@@ -11,14 +12,12 @@ if not defined LUA (
 )
 echo using lua interpreter %LUA%
 
-rem set up lua environment
-set LUA_INIT=require 'init'; package.path = package.path .. ';luacov/src/?.lua;luacov-cobertura/src/?.lua'
-
 rem delete old files if they exist
 del luacov.stats.out 2> nul
 del coverage.xml 2> nul
 
 rem run tests with coverage
+set LUA_INIT=require('init'); package.path = package.path .. ';luacov/src/?.lua'
 %LUA% -lluacov tests/test.lua
 
 rem fix paths unless told otherwise
@@ -27,6 +26,7 @@ if not defined TEST_FAIL (
 )
 
 rem convert luacov format to cobertura format
+set LUA_INIT=package.path = package.path .. ';luacov/src/?.lua;luacov-cobertura/src/?.lua'
 %LUA% luacov-cobertura/src/bin/luacov-cobertura -o coverage.xml
 
 rem check coverage and fail if all lines aren't tested

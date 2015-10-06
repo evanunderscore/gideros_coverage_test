@@ -22,6 +22,7 @@ def main():
         num, name = fileline.split(':')
         name = name.rstrip('\n')
         fixedname = os.path.normpath(name)
+        fixedname = fixedname.replace('\\', '/')
         if fixedname != name:
             LOGGER.info('changing %s to %s', name, fixedname)
             fileline = '{}:{}\n'.format(num, fixedname)

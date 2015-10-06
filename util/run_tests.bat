@@ -3,8 +3,6 @@ setlocal
 
 rem run tests and report coverage information
 rem run from repository root (as "util\run_tests.bat")
-rem "set TEST_FAIL=1" to see failure in diff-cover
-rem "set TEST_FAIL=" to clear
 
 rem set this to use a different lua interpreter
 if not defined LUA (
@@ -21,10 +19,8 @@ set LUA_INIT=package.path = package.path .. ';luacov/src/?.lua;luaunit/?.lua'
 %LUA% -l luacov -l init tests/test.lua
 if errorlevel 1 exit /b %ERRORLEVEL%
 
-rem fix paths unless told otherwise
-if not defined TEST_FAIL (
-    util\fix_filenames.py luacov.stats.out
-)
+rem fix file paths in report to be unix-style
+util\fix_filenames.py luacov.stats.out
 
 rem convert luacov format to cobertura format
 set LUA_INIT=package.path = package.path .. ';luacov/src/?.lua;luacov-cobertura/src/?.lua'
